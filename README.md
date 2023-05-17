@@ -6,3 +6,4 @@
 ## Data Dictionary ## 
 1. Food Import: Food brought from abroad for sale
 2. Consumer Price Index: The measure of average change overtime in the prices paid by typical consumers for retail goods and other items
+## Data Cleaning
