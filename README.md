@@ -8,7 +8,7 @@
   In this project, we will be analyzing the price of imported goods and services and their consumption price index. we want to see if the price of goods
 affected by the amount of imports. some questions we want to answer, are.... Does the price of goods in the US increase as import increase? or is it not affected at all? And if it is affected by import, how much? which products are heavily affected by price and what products are slightly affected?
 
-## Data Dictionary ## 
+# Data Dictionary 
 1. Food Import: Food brought from abroad for sale
-2. Consumer Price Index: The measure of average change overtime in the prices paid by typical consumers for retail goods and other items
-## Data Cleaning
+2. Consumer Price Index (CPI): The measure of average change overtime in the prices paid by typical consumers for retail goods and other items
+# Data Cleaning
