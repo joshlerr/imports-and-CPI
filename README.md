@@ -6,7 +6,7 @@
 
 
   In this project, we will be analyzing the price of imported goods and services and their consumption price index. we want to see if the price of goods
-affected by the amount of imports. Does the price of goods in the US increase as import increase? or is it not affected at all?
+affected by the amount of imports. some questions we want to answer, are.... Does the price of goods in the US increase as import increase? or is it not affected at all? And if it is affected by import, how much? which products are heavily affected by price and what products are slightly affected?
 
 ## Data Dictionary ## 
 1. Food Import: Food brought from abroad for sale
