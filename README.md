@@ -1,7 +1,7 @@
 # Imports-and-CPI 🥝🥩 📈 📉
 **Contributors**
   *Josh Yenesew, Rebecca Moges, Abdou Chaib*
-  ## Introduction ##
+  # Introduction 
   ![tin](https://github.com/joshlerr/imports-and-CPI/assets/118494139/4dea2f6c-6684-4b9f-870f-e3085bc333aa)
 
 
