@@ -60,7 +60,9 @@ cpi_chart <- ggplot(data = joined_table, aes(x = year)) +
 # combine the two charts using gridExtra
 grid.arrange(import_price_chart, cpi_chart, ncol = 2)
 ```  
-the grid arrange function is a function used specifially to arrange the two line charts used above side by side. and the line chart used here is very important since it represents the project all in all. the chart in the left shows the increase in price while the chart in the right shows the change in cpi. from this, we can see that if the change in cpi (or the increase in price of food in the US from year to year) is because of imports of goods and services.
+the grid arrange function is a function used specifially to arrange the two line charts used above side by side. and the line chart used here is very important since it represents the project all in all. the chart in the left shows the increase in price while the chart in the right shows the change in cpi. from this, we can see that if the change in cpi (or the increase in price of food in the US from year to year) is because of imports of goods and services.  
+# Prediction Model  
+one of the major thing required for this project was making a model. to make this model, we also had to see researches that had been done in previous years to make model predictions about food imports and consumer price index.
 
 
 
