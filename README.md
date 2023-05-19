@@ -62,7 +62,9 @@ grid.arrange(import_price_chart, cpi_chart, ncol = 2)
 ```  
 the grid arrange function is a function used specifially to arrange the two line charts used above side by side. and the line chart used here is very important since it represents the project all in all. the chart in the left shows the increase in price while the chart in the right shows the change in cpi. from this, we can see that if the change in cpi (or the increase in price of food in the US from year to year) is because of imports of goods and services.  
 # Prediction Model  
-one of the major thing required for this project was making a model. to make this model, we also had to see researches that had been done in previous years to make model predictions about food imports and consumer price index. the model we used as a reference was called "Forecasting Import Prices of Basic Foodstuffs in the Caribbean Community (CARICOM) Using Univariate Time Series Models," published in the Journal of Economics and Sustainable Development in 2014. in this model, they used the price increase and food import amount to make a linear regression model. 
+one of the major thing required for this project was making a model. to make this model, we also had to see researches that had been done in previous years to make model predictions about food imports and consumer price index. the model we used as a reference was called "Forecasting Import Prices of Basic Foodstuffs in the Caribbean Community (CARICOM) Using Univariate Time Series Models," published in the Journal of Economics and Sustainable Development in 2014. in this model, they used the price increase and food import amount to make a linear regression model. we also used regression models to make two models, one representing meat prodcuts, the other representing vegetable product.  
+```r 
+
 
 
 
