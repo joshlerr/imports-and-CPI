@@ -18,4 +18,5 @@ cleaning the dataset was a little tricky. during the beginning of our data class
 ```r
 joined_table <- left_join(Foodimports, PPIforecast, by = "year")  
 ```  
-
+# Visualizations and pivot tables  
+To make different visualizations and analysis on the dataset, we had to create pivot tables which would arrange the dataset into different parts.
