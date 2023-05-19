@@ -28,6 +28,6 @@ meat_dairy_long <- gather(meat_dairy, key="category", value="cpi", Meats:Dairy)
 veg_fruit_long <- gather(veg_fruit, key="category", value="cpi", Vegetables:Fruits)
 meat_fruit_long<- gather(meat_fruit, key = "category", value = "cpi", Meats:Fruits)
 ``` 
-as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions.
+as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions. so using these functions, we were able to organize the dataset into different groups(with their price and cpi). 
 
 
