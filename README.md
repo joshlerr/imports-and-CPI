@@ -14,6 +14,7 @@ affected by the amount of imports. some questions we want to answer, are.... Doe
 # Data Cleaning  
 cleaning the dataset was a little tricky. during the beginning of our data class, we talked about tidy data and we said that every column is a variable and every row is an observation. the data set we had involved columns with observations and rows with variables.  
 1. we changed every column into a variable and every row into observation.  
+  
 2. we joined the two datasets we had using thier common key and left_joining them.  
 ```r
 joined_table <- left_join(Foodimports, PPIforecast, by = "year")  
@@ -58,7 +59,8 @@ cpi_chart <- ggplot(data = joined_table, aes(x = year)) +
 
 # combine the two charts using gridExtra
 grid.arrange(import_price_chart, cpi_chart, ncol = 2)
-```
+```  
+the grid arrange function is a function used specifially to arrange the two line charts used above side by side. and the line chart used here is very important since it represents the project all in all. the chart in the left shows the increase in price while the chart in the right shows the change in cpi. from this, we can see that if the change in cpi (or the increase in price of food in the US from year to year) is because of imports of goods and services.
 
 
 
