@@ -19,7 +19,7 @@ cleaning the dataset was a little tricky. during the beginning of our data class
 joined_table <- left_join(Foodimports, PPIforecast, by = "year")  
 ```  
 # Visualizations and pivot tables  
-To make different visualizations and analysis on the dataset, we had to create pivot tables which would arrange the dataset into different parts.  
+1 To make different visualizations and analysis on the dataset, we had to create pivot tables which would arrange the dataset into different parts.  
 ```r
 meat_dairy <- subset(joined_table, select=c("year", "Meats", "Dairy"))
 veg_fruit <- subset(joined_table, select=c("year", "Vegetables", "Fruits"))
@@ -28,6 +28,11 @@ meat_dairy_long <- gather(meat_dairy, key="category", value="cpi", Meats:Dairy)
 veg_fruit_long <- gather(veg_fruit, key="category", value="cpi", Vegetables:Fruits)
 meat_fruit_long<- gather(meat_fruit, key = "category", value = "cpi", Meats:Fruits)
 ``` 
-as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions. so using these functions, we were able to organize the dataset into different groups(with their price and cpi). 
+as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions. so using these functions, we were able to organize the dataset into different groups(with their price and cpi).  
+2. visualize the pivot tables using ggplot functions. i used different ggplot functions, but the one that got my attention was charting two graphs side by side.  
+```r
+
+
+
 
 
