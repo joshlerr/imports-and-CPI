@@ -64,7 +64,19 @@ the grid arrange function is a function used specifially to arrange the two line
 # Prediction Model  
 one of the major thing required for this project was making a model. to make this model, we also had to see researches that had been done in previous years to make model predictions about food imports and consumer price index. the model we used as a reference was called "Forecasting Import Prices of Basic Foodstuffs in the Caribbean Community (CARICOM) Using Univariate Time Series Models," published in the Journal of Economics and Sustainable Development in 2014. in this model, they used the price increase and food import amount to make a linear regression model. we also used regression models to make two models, one representing meat prodcuts, the other representing vegetable product.  
 ```r 
-
+model <- lm(Meats ~ MeatsCPI, data = joined_table)
+# make prediction on meat products
+new_data <- data.frame(MeatsCPI = c(120, 125, 130)) # new data to predict on
+predicted_import_price <- predict(model, newdata = new_data)
+plot(joined_table$MeatsCPI, joined_table$Meats, main = "Import Price of Meat vs. CPI of Meat products", xlab = "CPI of Meat", ylab = "Import Price of Meat")
+abline(model, col = "red")
+#make prediction on vegetable products
+models <- lm(Vegetables ~ VegetablesCPI, data = joined_table)
+new_data <- data.frame(VegetablesCPI = c(120, 125, 130)) # new data to predict on
+predicted_import_price <- predict(models, newdata = new_data)
+plot(joined_table$VegetablesCPI, joined_table$Vegetables, main = "Import Price of vegetables vs. CPI of vegetable products", xlab = "CPI of Meat", ylab = "Import Price of Meat")
+abline(models, col = "blue")  
+```
 
 
 
