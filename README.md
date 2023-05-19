@@ -11,4 +11,11 @@ affected by the amount of imports. some questions we want to answer, are.... Doe
 # Data Dictionary 
 1. Food Import: Food brought from abroad for sale
 2. Consumer Price Index (CPI): The measure of average change overtime in the prices paid by typical consumers for retail goods and other items
-# Data Cleaning
+# Data Cleaning  
+cleaning the dataset was a little tricky. during the beginning of our data class, we talked about tidy data and we said that every column is a variable and every row is an observation. the data set we had involved columns with observations and rows with variables.  
+1. we changed every column into a variable and every row into observation.  
+2. we joined the two datasets we had using thier common key and left_joining them.  
+```r
+joined_table <- left_join(Foodimports, PPIforecast, by = "year")  
+```  
+
