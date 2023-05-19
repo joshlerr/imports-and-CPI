@@ -31,7 +31,34 @@ meat_fruit_long<- gather(meat_fruit, key = "category", value = "cpi", Meats:Frui
 as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions. so using these functions, we were able to organize the dataset into different groups(with their price and cpi).  
 2. visualize the pivot tables using ggplot functions. i used different ggplot functions, but the one that got my attention was charting two graphs side by side.  
 ```r
+import_price_chart<-ggplot(data = joined_table, aes(x = year)) +
+  geom_line(aes(y = Meats, color = "Meat"), size = 1) +
+  geom_line(aes(y = Dairy, color = "Dairy"), size = 1) +
+  geom_line(aes(y = Nuts, color = "Nuts"), size = 1) +
+  geom_line(aes(y = Fruits, color = "Fruits"), size = 1) +
+  labs(x = "Year", y = "Import Price", color = "") +
+  scale_color_manual(values = c("red", "blue", "green", "purple"), name = "") +
+  theme_classic() +
+  labs(title = "Import Prices for Meat, Dairy, Nuts, and Fruit")
+  coord_cartesian(ylim = c(0, max(joined_table[, c("Meats", "Dairy", 
+                                              "Nuts", "Fruits")], na.rm = TRUE)*1.1))
+                                             
+cpi_chart <- ggplot(data = joined_table, aes(x = year)) +
+  geom_line(aes(y = MeatsCPI, color = "Meat CPI"), size = 1) +
+  geom_line(aes(y = DairyCPI, color = "Dairy CPI"), size = 1) +
+  geom_line(aes(y = NutsCPI, color = "Nuts CPI"), size = 1) +
+  geom_line(aes(y = FruitsCPI, color = "Fruits CPI"), size = 1) +
+  labs(x = "Year", y = "CPI", color = "") +
+  scale_color_manual(values = c("red", "blue", "green", "purple"), 
+                     name = "", 
+                     labels = c("Meat", "Dairy", "Nuts", "Fruits")) +
+  theme_classic() +
+  labs(title = "CPI Comparison") +
+  coord_cartesian(ylim = c(0, max(joined_table[, c("MeatsCPI", "DairyCPI", "NutsCPI", "FruitsCPI")], na.rm = TRUE)*1.1))
 
+# combine the two charts using gridExtra
+grid.arrange(import_price_chart, cpi_chart, ncol = 2)
+```
 
 
 
