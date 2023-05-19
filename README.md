@@ -76,7 +76,9 @@ new_data <- data.frame(VegetablesCPI = c(120, 125, 130)) # new data to predict o
 predicted_import_price <- predict(models, newdata = new_data)
 plot(joined_table$VegetablesCPI, joined_table$Vegetables, main = "Import Price of vegetables vs. CPI of vegetable products", xlab = "CPI of Meat", ylab = "Import Price of Meat")
 abline(models, col = "blue")  
-```
+```  
+# Citation  
+Huang, K. S. (Year). Forecasting Consumer Price Indexes for Food: A Demand Model Approach. Technical Bulletin No. 1883. Food and Rural Economics Division,   Economic Research Service, U.S. Department of Agriculture.
 
 
 
