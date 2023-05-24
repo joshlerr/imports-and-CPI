@@ -17,6 +17,8 @@ cleaning the dataset was a little tricky. during the beginning of our data class
   
 2. we joined the two datasets we had using thier common key and left_joining them.  
 ```r
+Foodimports<-read_excel("FoodImports main.xlsx")
+PPIforecast<-read_excel("PPIForecast.xlsx")
 joined_table <- left_join(Foodimports, PPIforecast, by = "year")  
 ```  
 # Visualizations and pivot tables  
