@@ -13,7 +13,7 @@ library(dplyr)
 library(gridExtra)
 rm(list=ls())
 
-#setwd("C:/slick project")
+setwd("C:/slick project")
 Foodimports<-read_excel("FoodImports main.xlsx")
 PPIforecast<-read_excel("PPIForecast.xlsx")
 joined_table <- left_join(Foodimports, PPIforecast, by = "year")
