@@ -33,6 +33,7 @@ meat_fruit_long<- gather(meat_fruit, key = "category", value = "cpi", Meats:Frui
 ``` 
 as we can see above, we used a new function that we havent used before called "subset". it is used to extract subsets of data from a data frame or a vector based on specified conditions. The subset() function is a convenient way to filter or select specific rows or columns of a dataset based on logical expressions. so using these functions, we were able to organize the dataset into different groups(with their price and cpi).  
 2. visualize the pivot tables using ggplot functions. i used different ggplot functions, but the one that got my attention was charting two graphs side by side.  
+#Line Charts 
 ```r
 import_price_chart<-ggplot(data = joined_table, aes(x = year)) +
   geom_line(aes(y = Meats, color = "Meat"), size = 1) +
